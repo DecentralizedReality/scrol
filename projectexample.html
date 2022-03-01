@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.5.0.min.js.js"></script>
+
+    <style>
+#container2{
+    position: fixed;
+width:100%;
+height:100%;
+display: block;
+
+background-size: cover;
+}
+
+#open {
+    position: absolute;
+    top:30px;
+    visibility: hidden;
+    
+}
+#close{
+    position: absolute;
+    top:100px;
+    visibility: hidden;
+
+
+}
+#btn1  ,#btn2 ,#btn4 , #opac , #btn5{
+    position: absolute;
+    top:500px;
+    
+    visibility: hidden;
+
+
+
+}
+#btn3{
+position: absolute;
+
+}
+
+#left {
+
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+  width: 25%;
+  display: none;
+  border: #417290 solid 1px;
+  background-color: #d7f0fc;
+  margin-top: 1%;
+  padding: 1%;
+  margin-left: 15%;
+}
+#right{
+
+position: relative;
+border-radius: 20px;
+text-align: center;
+display: none;
+width: 25%;
+border: #417290 solid 1px;
+background-color: #d7f0fc;
+padding: 1%;
+margin-left: 60%;
+
+}
+#middle{
+  position: relative;
+border-radius: 20px;
+text-align: center;
+display: none;
+width: 25%;
+border: #417290 solid 1px;
+background-color: #d7f0fc;
+padding: 1%;
+margin-left: 35%;
+
+
+}
+#animright , #anim , #animmdl{
+padding-top: 2%;
+
+}
+#showw{
+position:absolute;
+top:20px;
+right: 10px;
+}
+#open ,#close,#opac{
+  display: none;
+}
+#scrol{
+position: relative;
+width: 100%;
+height: 6500px;
+
+}
+
+#pics{
+position: absolute;
+width: 90%;
+height: 90%;
+
+
+
+}
+
+#myDIV {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 0.01s infinite;
+}
+
+@keyframes mymove {
+  0% {top: 1%;}
+  10% {top: 2%;}
+  15% {top: 1%;}
+  20% {top: 2%;}
+  25% {top: 1%;}
+  30% {top: 2%;}
+  35% {top: 1%;}
+  40% {top: 2%;}
+
+  100% {top: 1%;}
+ 
+}
+
+@keyframes mymoveimg4 {
+
+  0% {top: 100%;}
+  100% {top: 50%;}
+
+}
+
+@keyframes mymov1eimg4 {
+
+0% {top: 50%;}
+100% {top: 50%;}
+
+}/*
+@keyframes im6opacity{
+  0% {opacity: 0;}
+  
+  100% {opacity: 1;}
+
+}*/
+/*
+@keyframes im5opacity{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+
+}*/
+@keyframes mymove1img4 {
+
+0% {top: 0%;}
+100% {top: 50%;}
+
+}
+@keyframes mymove3img4{
+  0% {top: 50%;}
+100% {top: 0%;}
+
+}
+
+@keyframes mymove2img4 {
+
+0% {top: 50%;}
+100% {top: 100%;}
+
+}
+
+@keyframes logbird {
+  0% {top:-45%;}
+  10% {top:-40;}
+  15% {top:-45%;}
+  20% {top:-40;}
+  25% {top:-45%;}
+  30% {top:-40;}
+  35% {top:-45%;}
+  40% {top:-40;}
+
+  100% {top: -45%;}
+ 
+}
+
+@keyframes mynewmove {
+  0% {top: 40%;}
+  10% {top: 41%;}
+  15% {top: 40%;}
+  20% {top: 41%;}
+  25% {top: 40%;}
+  30% {top: 41%;}
+  35% {top: 40%;}
+  40% {top: 41%;}
+
+  100% {top: 41%;}
+}
+
+@keyframes soci {
+  0% {top: 3%;}
+  10% {top: 4%;}
+  15% {top: 3%;}
+  20% {top: 4%;}
+  25% {top: 3%;}
+  30% {top: 4%;}
+  35% {top: 3%;}
+  40% {top: 4%;}
+
+  100% {top: 3%;}
+}
+
+@keyframes mymove0to_50img4{
+  0% {top: 0%;}
+100% {top: -50%;}
+
+}
+@keyframes mymov50to0eimg3{
+  0% {top: 50%;}
+100% {top: 0%;}
+
+}
+
+@keyframes mymov0to50eimg3{
+  0% {top: 0%;}
+100% {top: 50%;}
+
+}
+@keyframes mymove-100to-50img4{
+  0% {top: -100%;}
+100% {top: -50%;}
+
+}
+
+@keyframes mymov50to100eimg3{
+  0% {top: 50%;}
+100% {top: 100%;}
+
+}
+
+@keyframes mymove-50to0img4 {
+
+   0% {top: -50%;}
+100% {top: 0%;}
+}
+
+
+@keyframes mymove-50to-100img4{
+
+  0% {top: -50%;}
+100% {top: -100%;}
+
+
+}
+
+#bac{
+
+  position: fixed;
+  
+ 
+  width: 100%;
+  height:100%;
+
+
+}
+
+
+#img1 ,#img2 ,#img3 ,#img4 ,#img5{
+  display: none;
+}
+#img4{
+  opacity: 0;
+}
+#img5 {
+  transition: top 0.5s;
+}
+
+
+#img1 ,#img2 ,#img3 ,#img5 ,#img6 {
+  position: fixed;
+  top: 1%;
+  left: 0.5%;
+  width: 84%;
+  height: 99%;
+  
+  
+}
+#shak{
+  position: fixed;
+  top: 1%;
+  left: 0.5%;
+  width: 84%;
+  height: 99%;
+ 
+  animation-name: mymove;
+  animation-duration: 3s;
+  display: none;
+  animation-iteration-count: infinite;
+  
+}
+#img4 {
+  position: fixed;
+  left: 0.5%;
+  width: 84%;
+  height: 99%;
+  top:100%;
+  transition: top 0.5s;
+}
+
+#img3{
+  position: fixed;
+  left: 0.5%;
+  width: 84%;
+  height: 99%;
+  top:100%;
+  transition: top 0.5s;
+
+
+}
+/*
+#img5{
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  width: 35%;
+  height: 40%;
+  opacity: 0.7;
+
+}
+*/
+
+
+#picr1,#picr2,#picr3,#picr4,#picr5{
+  display: none;
+}
+
+#picr1,#picr2,#picr3,#picr4,#picr5,#picr6{
+
+  position: fixed;
+  top: 40%;
+  right: 0%;
+  width: 15%;
+  height: 35%;
+}
+
+
+@keyframes shpicr5 {
+  0% {top: 40%}
+  10% {top: 40.5%;}
+  15% {top: 40%}
+  20% {top: 40.5%;}
+  25% {top: 40%}
+  30% {top: 40.5%;}
+  35% {top: 40%}
+  40% {top: 40.5%;}
+
+  100% {top: 40%}
+ 
+}
+
+
+#shpicr5{
+  position: fixed;
+  top: 40%;
+  right: 0%;
+  width: 15%;
+  height: 35%;
+  animation-name: shpicr5;
+  animation-duration: 3s;
+  display: none;
+  animation-iteration-count: infinite;
+
+}
+
+#soci{
+  position: fixed;
+  top: 3%;
+  width: 10%;
+  height: 40%;
+  right: 2%;
+  
+}
+
+#what ,#twe ,#yout, #faceb{
+position: relative;
+margin-top: 10px;
+left: 40px;
+
+width: 60px;
+height: 60px;
+
+}
+#what{
+  background-image: url("pics/soci/WhatsApp.svg.png");
+  background-size: cover;
+}
+#twe{
+  background-image: url("pics/soci/twt.png");
+  background-size: cover;
+}
+#yout{
+  background-image: url("pics/soci/800px-YouTube_social_white_squircle.svg.png");
+  background-size: cover;
+}
+#faceb{
+  background-image: url("pics/soci/280px-Facebook_f_logo_2019.svg.png");
+  background-size: cover;
+}
+#logoo{
+  position: fixed;
+  width: 100%;
+  height: 25%;
+  top: 35%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: +2;
+}
+#imglogo{
+  position: absolute;
+  height: 175%;
+  width: 120%;
+  left: -1%;
+  top: -40%;
+  opacity: 0;
+  
+}
+#writ{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+ z-index: +2;
+  left: 30%;
+  color: #d7f0fc;
+}
+#c1{
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: #d7f0fc;
+border-radius: 50%;
+left: 30%;
+top: 40%;
+}
+#c2{
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: #d7f0fc;
+border-radius: 50%;
+left: 35%;
+top: 40%;
+}
+#c3{
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: #d7f0fc;
+border-radius: 50%;
+left: 32.5%;
+top: 30%;
+}
+#c4{
+position: absolute;
+width: 20px;
+height: 20px;
+background-color: #d7f0fc;
+border-radius: 50%;
+left: 32.5%;
+top: 49%;
+}
+#logoo h1{
+  position: absolute;
+  left: 43%;
+  top: 12%;
+  font-size: 50px;
+}
+#smlwrt{
+  position:absolute;
+  width: 35%;
+  left: 75%;
+  top: 39%;
+}
+
+    </style>
+</head>
+<body>
+
+<div id="logoo">
+<!--
+
+<img src="pics/brd.png" alt="" id="imglogo">
+
+-->
+
+
+</div>
+<img src="pics/1024px-Solid_black.svg.png" alt="" id="bac">
+<div id="pics">
+<img src="pics/Screenshot_20220121-142343_Instagram.jpg" alt="" id="img1">
+<img src="pics/bacbrd3.png" alt="" id="img2">
+<img src="pics/Screenshot_20220121-142301_Instagram.jpg" alt="" id="img3">
+<img src="pics/bacbrd3.png" alt="" id="img4">
+<img src="pics/Screenshot_20220121-142343_Instagram.jpg" alt="" id="img5">
+<img src="pics/Screenshot_20220121-142343_Instagram.jpg" alt="" id="shak">
+
+<img src="pics/Atonemento.PNG" alt="" id="img6">
+
+
+
+</div>
+
+
+<div id="soci" >
+<div id="what"></div>
+<div id="twe"></div>
+<div id="yout"></div>
+<div id="faceb"></div>
+
+</div>
+
+<div id="picsright">
+<img src="pics/right/Picsart_22-01-21_15-30-01-372.jpg" alt="" id="picr1">
+<img src="pics/right/Picsart_22-01-21_15-30-56-314.jpg" alt="" id="picr2">
+<img src="pics/right/Picsart_22-01-21_15-34-19-012.jpg" alt="" id="picr3">
+<img src="pics/right/Picsart_22-01-21_15-34-48-184.jpg" alt="" id="picr4">
+<img src="pics/right/Picsart_22-01-21_15-35-24-825.jpg" alt="" id="picr5">
+<img src="pics/right/Picsart_22-01-21_15-35-24-825.jpg" alt="" id="shpicr5">
+<img src="pics/right/Picsart_22-01-21_15-35-16-415.jpg" alt="" id="picr6">
+
+
+</div>
+
+<div id="container2">
+
+</div>
+<br>
+<div id="scrol"></div>
+<input type="text" id="open" value="0"/>
+<input type="text" id="close" value="0" />
+<input type="text" id="opac" value="0" />
+
+
+
+
+<button id="btn1">click1</button>
+<button id="btn2">click2</button>
+<button id="btn3">click3</button>
+<button id="btn4">click4</button>
+
+<div id="left">
+  <div>Stage 1 - Pre-Filter</div> 
+  <br>
+  <div>Capture large airbone particulates<br>
+  fibers and hair .
+  </div>
+  
+  
+  <div id="anim">click for more info</div>
+  
+  </div>
+
+  <div id="middle">
+ 
+    <div>Stage 2 - HEAP Filter</div> 
+  <br>
+  <div>Remove small particies such as allergens , bacteria ,<br>
+  mould , viruses , fungi and asbetos .
+  </div>
+    <div id="animmdl">click for more info</div>
+    
+    </div>
+
+    <div id="right">
+      <div>Stage 3 - Carbon Filter</div> 
+    <br>
+    <div> Remove formaldehyde , dioxin and ozona ,<br>
+      as well as odoyrs from smoking , cooking and pets .
+    </div>
+      
+      <div id="animright">click for more info</div>
+    
+      </div>
+
+
+
+
+
+<script src="js/jquery-3.5.0.min.js.js"></script>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/stats.min.js"></script>
+    <script type="moduel" src="js/build/three.module.js"></script>
+    <script type="moduel"src="js/materials/Material.js"></script>
+    <script type="moduel"src="js/constants.js"></script>
+    <script type="moduel"src="js/Color.js"></script>
+    <script type="moduel"src="js/ObjectControls.js"></script>
+    <script type="moduel"src="js/Matrix4.js"></script>
+    <script type="moduel"src="js/AnimationMixer.js"></script>
+    <script type="moduel"src="js/AnimationClip.js"></script>
+    <script type="moduel"src="js/stats.module.js"></script>
+    <script type="moduel"src="js/DRACOLoader.js"></script>
+    <script type="moduel"src="js/Clock.js"></script>
+    <script type="moduel"src="js/MMDLoader.js"></script>
+    <script type="moduel"src="js/MMDPhysics.js"></script>
+    <script type="moduel"src="js/AnimationUtils.js"></script>
+    <script type="moduel"src="js/MeshStandardMaterial.js"></script>
+    <script type="moduel"src="js/MeshBasicMaterial.js"></script>
+    <script type="moduel"src="js/VideoTexture.js"></script>
+    <script type="moduel"src="js/OBJLoader.js"></script>
+    <script type="moduel"src="js/DecalGeometry.js"></script>
+    <script type="moduel"src="js/misc/MorphBlendMesh.js"></script>
+    <script type="moduel"src="js/EventsControls.js"></script>
+    <script type="moduel" src="js/Raycaster.js"></script>
+    <script type="moduel" src="js/InstancedMesh.js"></script>
+    <script type="moduel" src="js/TrackballControls.js"></script>
+    <script  src="js/Lensflare.js"></script>
+
+
+    
+    <script type="module">
+
+        // import * as THREE from '../build/three.module.js';
+ 
+         import { OrbitControls } from './jsm/controls/OrbitControls.js';
+  
+         import { Lensflare, LensflareElement } from './jsm/objects/Lensflare.js';
+         import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+         import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+			import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
+
+let container2=document.getElementById("container2");
+         var sence2 , camera2 , control12 , render2 , light12 ,light13, spot2   ;
+    var containerWidth = container2.clientWidth;
+var containerHeight = container2.clientHeight;
+/*
+const amount = parseInt( window.location.search.substr( 1 ) ) || 10;
+			const count = Math.pow( amount, 3 );
+*/
+
+
+var showw;
+window.nnnn=[];
+
+     sence2 = new THREE.Scene();
+    
+
+    
+            /*
+            const axesHelper = new THREE.AxesHelper(5);
+            sence2.add(axesHelper)
+            */
+          
+
+            light12 = new THREE.DirectionalLight( 0xffffff, 1, 500 );
+            light12.position.set(0,7,2);
+            
+            light13 = new THREE.DirectionalLight( 0xffffff, 1, 500 );
+            light13.position.set(0,-7,-2);
+            light13.castShadow = true; // default false
+
+            sence2.add(light12);
+            sence2.add(light13);
+
+/*
+            var light13 = new THREE.HemisphereLight(0xFFFFFF,0xFFFFFF,3);
+            light13.position.set(0,0,7);
+            sence2.add(light13);
+            */
+            spot2 = new THREE.SpotLight(0xFFFFFF,1);
+            spot2.shadow.bias=-0.0001;
+            spot2.shadow.mapSize.width=1024*4;
+            spot2.shadow.mapSize.height=1024*4;
+    
+            //sence2.add(spot2);
+            render2 = new THREE.WebGLRenderer({ antialias: true , container2, alpha:true});
+            render2.setPixelRatio( window.devicePixelRatio )
+            render2.setSize(containerWidth, containerHeight);
+            render2.physicallyCorrectLights = true;
+            render2.shadowMap.enabled = true;
+            render2.outputEncoding = THREE.sRGBEncoding;
+            render2.tonMapping = THREE.ReinhardToneMapping;
+            render2.tonMappingExposure = 2.3;
+            render2.shadowMap.enable=true;
+            container2.appendChild(render2.domElement);
+            camera2 = new THREE.PerspectiveCamera(75, containerWidth / containerHeight,0.1,1000);
+            control12 = new THREE.OrbitControls(camera2,render2.domElement);
+           // control12.enableZoom=false;
+           var hemiLight = new THREE.HemisphereLight(0xffeeb1,0x080820,10);
+           
+            camera2.position.set(5,10,1);
+            control12.update();
+          
+
+         //   control12.target.set(1, 1.5, 1);
+control12.update();
+
+
+        hemiLight.position.set(0,0,0);
+       sence2.add(hemiLight);
+
+
+            const lightlans = new THREE.PointLight( 0xffffff, 10, 2000 );
+
+const textureLoader = new THREE.TextureLoader();
+
+const textureFlare0 = textureLoader.load( "textures/lensflare0.png" );
+const textureFlare1 = textureLoader.load( "textures/lensflare2.png" );
+const textureFlare2 = textureLoader.load( "textures/lensflare3.png" );
+
+const lensflare = new THREE.Lensflare();
+
+lensflare.addElement( new LensflareElement( textureFlare0, 100, 0 ) );
+lensflare.addElement( new LensflareElement( textureFlare1, 100, 0 ) );
+lensflare.addElement( new LensflareElement( textureFlare2, 100, 0.6 ) );
+
+lightlans.add(lensflare)
+
+//sence2.add(lightlans)
+
+
+
+
+            var containerWidth = container2.clientWidth;
+var containerHeight = container2.clientHeight;
+            camera2.aspect = containerWidth / containerHeight;
+            camera2.updateProjectionMatrix();
+            render2.setSize(containerWidth, containerHeight);
+          
+        
+            let scrollY = window.scrollY;
+            var camPosIndex = 0;
+            var num=300;
+     var sss=10000
+     var chn=1
+     var anm="shake 0.82s cubic-bezier(.36,.07,.19,.97) both"
+
+var sclar=[];
+var topimg4 =-50;
+
+var zm =0.1;
+var opc =1;
+var opc1 =0;
+window.addEventListener('scroll', () =>
+{
+  //document.getElementById("img6").style.animation="mymove 1s infinite";  
+ // document.getElementById("img5").style.animation="mymove 1s infinite";
+ // document.getElementById("img4").style.animation="mymove 1s infinite";
+  //document.getElementById("img3").style.animation="mymove 3s infinite";
+  document.getElementById("img2").style.animation="mymove 3s infinite";
+  document.getElementById("img1").style.animation="mymove 3s infinite";
+ // document.getElementById("imglogo").style.animation="logbird 1s infinite";
+
+  
+
+  //document.getElementById("picr6").style.animation="mynewmove 1s infinite";  
+  //document.getElementById("picr5").style.animation="mynewmove 1s infinite";
+  //document.getElementById("picr4").style.animation="mynewmove 1s infinite";
+  //document.getElementById("picr3").style.animation="mynewmove 1s infinite";
+ // document.getElementById("picr2").style.animation="mynewmove 1s infinite";
+ // document.getElementById("picr1").style.animation="mynewmove 1s infinite";
+
+
+  //document.getElementById("soci").style.animation="soci 1s infinite";
+
+  
+
+
+
+
+
+  chn=20;
+    scrollY = window.scrollY
+sclar.push(scrollY);
+sclar.reverse();
+if(sclar.length>10){
+  sclar.length=3;
+}
+console.log(sclar)
+var zo =document.getElementById("img6").style.transform="scale("+((sss-scrollY*2)/200000)*chn+")";
+//document.getElementById("img5").style.transform="scale("+((100+scrollY*2)/200000)*chn+")";
+if(sclar[0]>=sclar[1] ){
+  document.getElementById("img6").style.opacity=opc;
+
+
+  if(opc>=1){
+opc=1
+
+  }
+  if(opc<=0){
+opc=0
+
+  }
+  opc-=0.01
+
+}
+if(sclar[0]<=sclar[1] ){
+  document.getElementById("img6").style.opacity=opc;
+  if(opc>=1){
+opc=1
+
+  }
+  if(opc<=0){
+opc=0
+
+  }
+
+  
+  opc+=0.01
+}
+
+
+
+
+
+//img5
+
+
+
+
+if(scrollY>=2000 && scrollY<=3999  ){
+
+
+  if(sclar[0]>=sclar[1] ){
+  document.getElementById("img5").style.opacity=opc1;
+
+
+  if(opc1>=1){
+opc1=1
+
+  }
+  if(opc1<=0){
+opc1=0
+
+  }
+  opc1+=0.01
+
+}
+if(sclar[0]<=sclar[1] ){
+  document.getElementById("img5").style.opacity=opc1;
+  
+  if(opc1>=1){
+opc1=1
+
+  }
+  if(opc1<=0){
+opc1=0
+
+  }
+  
+  opc1-=0.01
+}
+
+  //document.getElementById("img4").style.opacity="0";
+  document.getElementById("img6").style.display="none";
+  document.getElementById("picr6").style.display="none";
+  document.getElementById("img6").style.animation="im6opacity 0.7s forwards";
+ //document.getElementById("img5").style.transform=(zo)
+ //zm+=0.1;
+ document.getElementById("img5").style.transform="scale("+((2000+scrollY*2)/200000)*chn+")";
+ //document.getElementById("img5").style.transform="scale(0.5994)";
+  
+  document.getElementById("img5").style.animation="im5opacity 0.7s forwards";
+ // document.getElementById("imglogo").style.display="none";
+  document.getElementById("img5").style.display="block";
+  document.getElementById("picr5").style.display="block";
+  document.getElementById("picr5").style.animation="im5opacity 0.7s forwards";
+  //document.getElementById("img5").style.top="0%";
+}
+if(scrollY<=2000){
+  document.getElementById("img5").style.display="none";
+  document.getElementById("picr5").style.display="none";
+  document.getElementById("img6").style.display="block";
+  document.getElementById("picr6").style.display="block";
+}
+
+if(scrollY>=3800 && scrollY<=4300 ){
+
+document.getElementById("shak").style.display="block"
+document.getElementById("shpicr5").style.display="block"
+
+
+}
+if(scrollY<=3700  ){
+
+document.getElementById("shak").style.display="none"
+document.getElementById("shpicr5").style.display="none"
+}
+if(scrollY>=4000 && scrollY<=4500 ){
+  //document.getElementById("img5").style.display="none";
+  if(sclar[0]>=sclar[1] ){
+    document.getElementById("img5").style.top="-50%";
+    document.getElementById("img4").style.top="50%";
+    document.getElementById("img4").style.opacity="1";
+    document.getElementById("img4").style.animation="mymoveimg4 0.5s forwards";
+    document.getElementById("picr4").style.display="block";
+
+
+  }
+ 
+  if(sclar[0]<=sclar[1] ){
+    document.getElementById("img5").style.top="0%";
+     if(document.getElementById("img5").style.top=="0%"){
+    //document.getElementById("shak").style.display="block"
+    //document.getElementById("img5").style.animation="mymoveimg4 0.5s forwards";
+  }
+    document.getElementById("img4").style.top="100%";
+    document.getElementById("img4").style.opacity="1";
+    document.getElementById("img4").style.animation="mymove2img4 0.5s forwards";
+    document.getElementById("picr4").style.display="block";
+  }
+ 
+
+
+  document.getElementById("picr5").style.display="none";
+
+  
+  
+  //document.getElementById("picr4").style.display="block";
+ // document.getElementById("imglogo").style.opacity="1";
+  
+ // document.getElementById("imglogo").style.display="block";
+  document.getElementById("img4").style.display="block";
+}
+
+if(scrollY>=4500 && scrollY<=4800 ){
+  //document.getElementById("img5").style.display="none";
+  if(sclar[0]>=sclar[1] ){
+    document.getElementById("img5").style.top="-100%";
+    document.getElementById("img4").style.top="0%";
+    document.getElementById("img4").style.display="block";
+    document.getElementById("img4").style.opacity="1";
+    document.getElementById("picr4").style.display="block";
+    document.getElementById("img4").style.animation="mymove3img4 0.5s forwards";
+  }/*
+  if(document.getElementById("img4").style.top=="0%"){
+   // document.getElementById("img4").style.animation="mymove 3s infinite";
+  }*/
+  }
+  if(scrollY>=4500 && scrollY<=4800){
+  //document.getElementById("img5").style.display="none";
+  if(sclar[0]<=sclar[1] ){
+    document.getElementById("img5").style.top="-50%";
+    if(document.getElementById("img4").style.top=="0%"){
+     // document.getElementById("img4").style.top=="50%"
+      document.getElementById("img4").style.animation="mymove1img4 0.5s forwards";
+    }
+    document.getElementById("img4").style.display="block";
+    document.getElementById("picr4").style.display="block";
+
+    document.getElementById("img3").style.display="none";
+  }
+  }
+
+
+
+// for bird 
+
+if(scrollY>=4800 && scrollY<=5500 ){
+  document.getElementById("img4").style.top="0%"
+  document.getElementById("img4").style.display="block"
+
+
+}
+
+
+
+// for img3
+
+if(scrollY>=5200 && scrollY<=5400){
+  //document.getElementById("img4").style.display="none";
+  document.getElementById("picr4").style.display="none";
+
+  document.getElementById("picr3").style.display="block";
+ // document.getElementById("picr3").style.animation="im5opacity 0.7s forwards";
+
+  document.getElementById("img3").style.display="block";
+
+  if(sclar[0]>=sclar[1] ){
+    document.getElementById("img3").style.animation="mymoveimg4 0.5s forwards";
+    document.getElementById("img4").style.animation="mymove0to_50img4 0.5s forwards";
+  }
+ 
+  if(sclar[0]<=sclar[1] ){
+    document.getElementById("img3").style.animation="mymov50to100eimg3 0.5s forwards";
+    document.getElementById("img4").style.animation="mymove-50to0img4 0.5s forwards";
+  }
+  //document.getElementById("img3").style.animation="im5opacity 0.7s forwards";
+
+ // document.getElementById("imglogo").style.display="none";
+
+  
+}
+
+if(scrollY>=5400 && scrollY<=5900){
+
+  if(sclar[0]>=sclar[1] ){
+    document.getElementById("img3").style.animation="mymov50to0eimg3 0.5s forwards";
+    document.getElementById("img4").style.animation="mymove-50to-100img4 0.5s forwards";
+  }
+  if(sclar[0]<=sclar[1] ){
+    document.getElementById("img3").style.animation="mymov0to50eimg3 0.5s forwards";
+    document.getElementById("img4").style.animation="mymove-100to-50img4 0.5s forwards";
+  }
+
+}
+
+
+
+if(scrollY>=11000){
+  document.getElementById("img3").style.display="none";
+  document.getElementById("picr3").style.display="none";
+
+  document.getElementById("picr2").style.display="block";
+  
+ // document.getElementById("imglogo").style.display="block";
+
+
+  document.getElementById("img2").style.display="block";
+}
+if(scrollY>=13000){
+  document.getElementById("img2").style.display="none";
+  document.getElementById("picr2").style.display="none";
+
+  document.getElementById("picr1").style.display="block";
+  
+ // document.getElementById("imglogo").style.display="none";
+
+  document.getElementById("img1").style.display="block";
+}
+
+//camera2.position.z+=-3;
+
+
+    camPosIndex=  scrollY / container2.clientHeight*2;
+//camera2.rotation.z=  scrollY / container2.clientHeight*2;
+//camPosIndex++;
+
+control12.update();
+   // console.log(scrollY);
+});
+
+
+
+//start curve
+
+var randomPoints = [];
+
+for ( var i = 0; i < 100; i ++ ) {
+    randomPoints.push(
+      new THREE.Vector3(10, 1 ,-50),
+      new THREE.Vector3( 10, 0,10),
+	new THREE.Vector3( 5, 5,20),
+	new THREE.Vector3( 100, 10 ,30),
+	new THREE.Vector3( 5, -50,40),
+	new THREE.Vector3( 100, 100,-50)
+    );
+}
+
+
+// Create a sine-like wave
+const curve = new THREE.SplineCurve( [
+new THREE.Vector3(10, 1 ,-50),
+new THREE.Vector3(-10, 10 ,400),
+new THREE.Vector3(-5, 10 ,400),
+
+] );
+
+const points = curve.getPoints( 50 );
+const geometry1 = new THREE.BufferGeometry().setFromPoints( points );
+
+const material1 = new THREE.LineBasicMaterial( { color : 0xff0000 } );
+
+// Create the final object to add to the scene
+const splineObject = new THREE.Line( geometry1, material1 );
+
+//sence2.add(splineObject)
+
+
+var spline = new THREE.SplineCurve3(randomPoints);
+
+
+function update() {
+  render2.render(sence2, camera2);
+  requestAnimationFrame(update);
+  
+
+  if (camPosIndex > 10000) {
+    camPosIndex = 0;
+  }
+/*
+  var camPos = spline.getPoint(camPosIndex / 10000);
+  var camRot = spline.getTangent(camPosIndex / 10000);
+
+  camera2.position.x = camPos.x;
+  camera2.position.y = camPos.y;
+  camera2.position.z = camPos.z*-1.5;
+  
+  camera2.rotation.x = camRot.x;
+camera2.rotation.y = camRot.y;
+  camera2.rotation.z = camRot.z;
+  
+  camera2.lookAt(spline.getPoint((camPosIndex+1) / 10000));
+*/
+}
+update();
+/*
+for (var i = 0; i < 400; i++) {
+  var b = new THREE.Mesh(
+    new THREE.BoxGeometry(1,1,1),
+    new THREE.MeshBasicMaterial({color: "#EEEDDD"})
+  );
+  
+  b.position.x = -300 + Math.random() * 600;
+  b.position.y = -300 + Math.random() * 600;  
+  b.position.z = -300 + Math.random() * 600;
+  
+  sence2.add(b);
+  console.log("Added cube");
+}
+*/
+
+
+for(var l=0;l<2;l++){
+  var geometry = new THREE.SphereGeometry( 1, 2, 1 );
+var material = new THREE.MeshBasicMaterial( {color: 0xffffff, transparent: true, opacity: 0} );
+var cube = new THREE.Mesh( geometry, material );
+
+cube.position.x = Math.random() * 10 - 5;
+cube.position.y = Math.random() * 20 - 10;
+cube.position.z=30;
+
+const lensflare2 = new THREE.Lensflare();
+
+lensflare2.addElement( new LensflareElement( textureFlare0, 100, 0 ) );
+lensflare2.addElement( new LensflareElement( textureFlare1, 50, 0 ) );
+lensflare2.addElement( new LensflareElement( textureFlare2, 50, 0.6 ) );
+cube.opacity=0;
+cube.add(lensflare2);
+sence2.add( cube );
+
+  
+}
+
+//end curve
+
+
+            
+            window.addEventListener('resize', onWindowResi, false);
+        function onWindowResi() {
+            var containerWidth = container2.clientWidth;
+var containerHeight = container2.clientHeight;
+            camera2.aspect = containerWidth / containerHeight;
+            camera2.updateProjectionMatrix();
+            render2.setSize(containerWidth, containerHeight);
+            render11()
+        }
+
+        
+        const raycaster = new THREE.Raycaster();
+        const sceneMeshes = new Array();
+        var loader1 = new THREE.GLTFLoader();
+        var clock=new THREE.Clock();
+  var clock1=new THREE.Clock();
+  var clock2=new THREE.Clock();
+  var clock3=new THREE.Clock();
+  var clock5=new THREE.Clock();
+  var clock4=new THREE.Clock();
+  var clock5=new THREE.Clock();
+  var clock6=new THREE.Clock();
+  var clock7=new THREE.Clock();
+  var clock8=new THREE.Clock();
+  var clock9=new THREE.Clock();
+  var clock10=new THREE.Clock();
+  var clock11=new THREE.Clock();
+  var clock12=new THREE.Clock();
+  var clock13=new THREE.Clock();
+  var clock14=new THREE.Clock();
+  var clock15=new THREE.Clock();
+  var clock16=new THREE.Clock();
+  var clock17=new THREE.Clock();
+  var clock18=new THREE.Clock();
+
+
+  var mixer;
+  var mixer1;
+  var mixer2;
+  var mixer3;
+  var mixer4;
+  var mixer5;
+  var mixer6;
+  var mixer7;
+  var mixer8;
+  var mixer9;
+  var mixer10;
+  var mixer11
+  var mixer12;
+  var mixer13
+  var mixer14
+  var mixer15;
+
+var mixerbak2;
+var mixerbak3;
+var mixerbak4;
+var mixerbak5;
+var mixerbak6;// withclock9
+var mixerbak7; //13
+var mixerbak8;//14
+var mixerbak9;//15
+var mixerbak10;//16
+var mixerbak11;//17
+var mixerbak12;//18
+
+var mixerarow2;
+var mixerarow1;
+var mixertir;
+
+  var mixerinclone;
+  var mixercoverclone;
+  var varraiary=[];
+  var n=0;
+ 
+var trs;
+var n =0;
+var arry=[];
+var arrylight=[];
+
+
+
+
+
+const pmremGenerator = new THREE.PMREMGenerator( render2 );
+				pmremGenerator.compileEquirectangularShader();
+new RGBELoader()
+					.setDataType( THREE.UnsignedByteType )
+					.setPath( 'textures/equirectangular/' )
+					.load( 'photo_studio_01_2k.hdr', function ( texture ) {
+
+						const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
+
+					//	sence2.background = envMap;
+						sence2.environment = envMap;
+
+						texture.dispose();
+						pmremGenerator.dispose();
+
+						render11();
+          } );
+
+						// model
+
+						// use of RoughnessMipmapper is optional
+						const roughnessMipmapper = new RoughnessMipmapper( render2 );
+
+
+
+
+//flower2
+
+
+
+flower2();
+
+        function flower2( ){     
+ loader1.load('models/scroll1.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+          
+        window.flow=child;
+        flow.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    console.log(child);
+*/
+               child.material.metalness=0.1;
+              // console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer1=new THREE.AnimationMixer(child);
+        var oneloopp=mixer1.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+       
+       n1();
+        function n1( ){     
+ loader1.load('models/ggg.glb', function (gltff) {
+   //face1.glb 
+   
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+          
+
+
+//child.add(lensflare1)
+            window.flow1=child;
+            flow1.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    console.log(child);
+*/
+               child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer2=new THREE.AnimationMixer(child);
+        var oneloopp=mixer2.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+   
+       n2();
+        function n2( ){     
+ loader1.load('models/hert animation/n2.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+          
+            window.flow2=child;
+            flow2.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          console.log(child);
+             sence2.add(child);
+
+
+
+             mixer3=new THREE.AnimationMixer(child);
+        var oneloopp=mixer3.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+       n3();
+        function n3(aa ){     
+ loader1.load('models/hert animation/n3.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+            window.flow3=child;
+            flow3.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer4=new THREE.AnimationMixer(child);
+        var oneloopp=mixer4.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+       
+
+
+       n4();
+        function n4( ){     
+ loader1.load('models/hert animation/n4.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+            window.flow4=child;
+            flow4.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer5=new THREE.AnimationMixer(child);
+        var oneloopp=mixer5.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+
+       n5();
+        function n5( ){     
+ loader1.load('models/hert animation/n5.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+          
+            window.flow5=child;
+            flow5.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer5=new THREE.AnimationMixer(child);
+        var oneloopp=mixer5.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+
+
+
+      n6();
+        function n6( ){     
+ loader1.load('models/hert animation/n6.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+            window.flow6=child;
+            flow6.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer6=new THREE.AnimationMixer(child);
+        var oneloopp=mixer6.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+
+     n7();
+        function n7( ){     
+ loader1.load('models/hert animation/n7.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child7) {
+           if(child7.isMesh){
+          
+            window.flow7=child7;
+            flow7.visible=false;
+              // child7.position.z=0;
+/*
+            if(child7.name=="MONITOR_Plane001"){
+              child7.position.y=10;
+            }
+                    console.log(child7);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               console.log(child7);
+               child7.receiveShadow = true;
+                 child7.castShadow = true;
+                 child7.material.flatShading = true;
+          // console.log(child7.rotation.x);
+             sence2.add(child7);
+
+
+
+             mixer7=new THREE.AnimationMixer(child7);
+        var oneloopp=mixer7.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+
+     n8();
+        function n8( ){     
+ loader1.load('models/hert animation/n8.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+           if(child.isMesh){
+            window.flow8=child;
+            flow8.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+             sence2.add(child);
+
+
+
+             mixer8=new THREE.AnimationMixer(child);
+        var oneloopp=mixer8.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+
+
+
+
+       n9();
+        function n9( ){     
+ loader1.load('models/bird.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+          sence2.add( gltff.scene);
+           if(child.isMesh){
+             window.birdd=child;
+             birdd.visible=false;
+             console.log("kjhgfdsa")
+            //window.flow8=child;
+           // flow8.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+            
+
+
+
+             mixer9=new THREE.AnimationMixer(child);
+        var oneloopp=mixer9.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+       n10()
+
+       function n10( ){     
+ loader1.load('models/hert animation/n10.glb', function (gltff) {
+   //face1.glb
+         gltff.scene.traverse(function (child) {
+          sence2.add( gltff.scene);
+           if(child.isMesh){
+             window.flow10=child;
+           //  flow10.visible=false;
+             console.log("kjhgfdsa")
+            //window.flow8=child;
+           // flow8.visible=false;
+              // child.position.z=0;
+/*
+            if(child.name=="MONITOR_Plane001"){
+              child.position.y=10;
+            }
+                    //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+               //console.log(child);
+               child.receiveShadow = true;
+                 child.castShadow = true;
+                 child.material.flatShading = true;
+          // console.log(child.rotation.x);
+            
+
+
+
+             mixer10=new THREE.AnimationMixer(child);
+        var oneloopp=mixer10.clipAction(gltff.animations[0]).play();
+       //oneloopp.setLoop(THREE.LoopOnce);
+        oneloopp.clampWhenFinished=true;
+        oneloopp.enable=true;
+        oneloopp.timeScale=1;
+
+
+        
+             }
+
+       });
+        
+           
+       } , (xhr) => {
+         console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+     }, (error) => {
+         console.log(error);
+     });
+       
+       
+       }
+
+       n11()
+
+function n11( ){     
+loader1.load('models/hert animation/n11.glb', function (gltff) {
+//face1.glb
+  gltff.scene.traverse(function (child) {
+   sence2.add( gltff.scene);
+    if(child.isMesh){
+      window.flow11=child;
+    //  flow10.visible=false;
+      console.log("kjhgfdsa")
+     //window.flow8=child;
+    // flow8.visible=false;
+       // child.position.z=0;
+/*
+     if(child.name=="MONITOR_Plane001"){
+       child.position.y=10;
+     }
+             //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+        //console.log(child);
+        child.receiveShadow = true;
+          child.castShadow = true;
+          child.material.flatShading = true;
+   // console.log(child.rotation.x);
+     
+
+
+
+      mixer11=new THREE.AnimationMixer(child);
+ var oneloopp=mixer11.clipAction(gltff.animations[0]).play();
+//oneloopp.setLoop(THREE.LoopOnce);
+ oneloopp.clampWhenFinished=true;
+ oneloopp.enable=true;
+ oneloopp.timeScale=1;
+
+
+ 
+      }
+
+});
+ 
+    
+} , (xhr) => {
+  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+}, (error) => {
+  console.log(error);
+});
+
+
+}
+
+
+
+
+n12()
+
+function n12( ){     
+loader1.load('models/hert animation/n12.glb', function (gltff) {
+//face1.glb
+  gltff.scene.traverse(function (child) {
+   sence2.add( gltff.scene);
+    if(child.isMesh){
+      window.flow12=child;
+    //  flow10.visible=false;
+      console.log("kjhgfdsa")
+     //window.flow8=child;
+    // flow8.visible=false;
+       // child.position.z=0;
+/*
+     if(child.name=="MONITOR_Plane001"){
+       child.position.y=10;
+     }
+             //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+        //console.log(child);
+        child.receiveShadow = true;
+          child.castShadow = true;
+          child.material.flatShading = true;
+   // console.log(child.rotation.x);
+     
+
+
+
+      mixer12=new THREE.AnimationMixer(child);
+ var oneloopp=mixer12.clipAction(gltff.animations[0]).play();
+//oneloopp.setLoop(THREE.LoopOnce);
+ oneloopp.clampWhenFinished=true;
+ oneloopp.enable=true;
+ oneloopp.timeScale=1;
+
+
+ 
+      }
+
+});
+ 
+    
+} , (xhr) => {
+  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+}, (error) => {
+  console.log(error);
+});
+
+
+}
+
+
+
+
+
+n13()
+
+function n13( ){     
+loader1.load('models/hert animation/n13.glb', function (gltff) {
+//face1.glb
+  gltff.scene.traverse(function (child) {
+   sence2.add( gltff.scene);
+    if(child.isMesh){
+      window.flow13=child;
+    //  flow10.visible=false;
+      console.log("kjhgfdsa")
+     //window.flow8=child;
+    // flow8.visible=false;
+       // child.position.z=0;
+/*
+     if(child.name=="MONITOR_Plane001"){
+       child.position.y=10;
+     }
+             //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+        //console.log(child);
+        child.receiveShadow = true;
+          child.castShadow = true;
+          child.material.flatShading = true;
+   // console.log(child.rotation.x);
+     
+
+
+
+      mixer13=new THREE.AnimationMixer(child);
+ var oneloopp=mixer13.clipAction(gltff.animations[0]).play();
+//oneloopp.setLoop(THREE.LoopOnce);
+ oneloopp.clampWhenFinished=true;
+ oneloopp.enable=true;
+ oneloopp.timeScale=1;
+
+
+ 
+      }
+
+});
+ 
+    
+} , (xhr) => {
+  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+}, (error) => {
+  console.log(error);
+});
+
+
+}
+
+
+n14();
+function n14( ){     
+loader1.load('models/hert animation/n14.glb', function (gltff) {
+//face1.glb
+  gltff.scene.traverse(function (child) {
+   sence2.add( gltff.scene);
+    if(child.isMesh){
+      window.flow14=child;
+    //  flow10.visible=false;
+      console.log("kjhgfdsa")
+     //window.flow8=child;
+    // flow8.visible=false;
+       // child.position.z=0;
+/*
+     if(child.name=="MONITOR_Plane001"){
+       child.position.y=10;
+     }
+             //console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+        //console.log(child);
+        child.receiveShadow = true;
+          child.castShadow = true;
+          child.material.flatShading = true;
+   // console.log(child.rotation.x);
+     
+
+
+
+      mixer14=new THREE.AnimationMixer(child);
+ var oneloopp=mixer14.clipAction(gltff.animations[0]).play();
+//oneloopp.setLoop(THREE.LoopOnce);
+ oneloopp.clampWhenFinished=true;
+ oneloopp.enable=true;
+ oneloopp.timeScale=1;
+
+
+ 
+      }
+
+});
+ 
+    
+} , (xhr) => {
+  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+}, (error) => {
+  console.log(error);
+});
+
+
+}
+
+
+
+n15();
+function n15( ){     
+loader1.load('models/hert animation/n15.glb', function (gltff) {
+//face1.glb
+  gltff.scene.traverse(function (child) {
+   sence2.add( gltff.scene);
+    if(child.isMesh){
+      window.flow15=child;
+    //  flow10.visible=false;
+      console.log("kjhgfdsa")
+     //window.flow8=child;
+    // flow8.visible=false;
+       // child.position.z=0;
+/*
+     if(child.name=="MONITOR_Plane001"){
+       child.position.y=10;
+     }
+             console.log(child);
+*/
+child.material.metalness=0.3;
+               child.material.roughness=0.3
+        console.log(child);
+        child.receiveShadow = true;
+          child.castShadow = true;
+          child.material.flatShading = true;
+   // console.log(child.rotation.x);
+     
+
+
+
+      mixer15=new THREE.AnimationMixer(child);
+ var oneloopp=mixer15.clipAction(gltff.animations[0]).play();
+//oneloopp.setLoop(THREE.LoopOnce);
+ oneloopp.clampWhenFinished=true;
+ oneloopp.enable=true;
+ oneloopp.timeScale=1;
+
+
+ 
+      }
+
+});
+ 
+    
+} , (xhr) => {
+  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+}, (error) => {
+  console.log(error);
+});
+
+
+}
+
+
+
+
+       const pointer8 = new THREE.Vector2();
+
+      document.addEventListener( 'mousemove', onPointerMove );
+
+function onPointerMove( event ) {
+
+pointer8.x = (  event.offsetX / render2.domElement.clientWidth ) * 2 - 1;
+pointer8.y = - ( event.offsetY / render2.domElement.clientHeight ) * 2 + 1;
+//console.log(pointer8.x);
+//camera2.position.x=camera2.position.x+pointer8.x*2;
+
+}
+
+
+    
+const a = new THREE.Vector3( 1, 5, 1);
+
+
+//console.log(control12)
+control12.enabled = true;  
+render11();
+function render11() {
+    requestAnimationFrame(render11);
+    render2.render(sence2, camera2);
+           // cubeCamera1.updateCubeMap(render2,sence2);
+control12.update();
+control12.target=a
+control12.update();
+
+
+
+//control12.target.copy( child1.position );
+
+/*
+if(  $("#open").val()==1){
+  aarrow2.visible=true;
+  aarrow1.visible=true;
+
+}else{
+  if($("#open").val()==0){
+    aarrow2.visible=false;
+  aarrow1.visible=false;
+
+  }
+  
+
+}
+
+*/
+
+
+if(mixer1){
+
+mixer1.update(clock1.getDelta());
+
+}
+if(mixer2){
+
+mixer2.update(clock2.getDelta());
+
+}
+if(mixer3){
+
+mixer3.update(clock3.getDelta());
+
+}
+
+if(mixer4){
+
+mixer4.update(clock4.getDelta());
+
+}
+if(mixer5){
+
+mixer5.update(clock5.getDelta());
+
+}
+if(mixer6){
+
+mixer6.update(clock6.getDelta());
+
+}
+if(mixer7){
+
+mixer7.update(clock7.getDelta());
+
+}
+
+if(mixer8){
+
+mixer8.update(clock8.getDelta());
+
+}
+if(mixer9){
+
+mixer9.update(clock9.getDelta());
+
+}
+if(mixer10){
+
+mixer10.update(clock10.getDelta());
+
+}
+
+if(mixer11){
+
+mixer11.update(clock11.getDelta());
+
+}
+if(mixer12){
+
+mixer12.update(clock12.getDelta());
+
+}
+
+if(mixer13){
+
+mixer13.update(clock13.getDelta());
+
+}
+
+if(mixer14){
+
+mixer14.update(clock14.getDelta());
+
+}
+
+if(mixer15){
+
+mixer15.update(clock15.getDelta());
+
+}
+
+
+
+
+
+
+if(scrollY>=3000 && scrollY<=4000){
+  flow.visible=false;
+  flow1.visible=true;
+  flow2.visible=true;
+  flow3.visible=true;
+  flow4.visible=true;
+  flow5.visible=false;
+  flow6.visible=true;
+  flow7.visible=true;
+  flow8.visible=true;
+ 
+  flow10.visible=true;
+  flow11.visible=true;
+  flow12.visible=true;
+  flow13.visible=true;
+  flow14.visible=true;
+  flow15.visible=true;
+  document.getElementById("img5").display="none";
+
+}else if(scrollY>=13000 && scrollY<=15000){
+  flow.visible=true;
+  flow1.visible=true;
+  flow2.visible=true;
+  flow3.visible=true;
+  flow4.visible=true;
+  flow5.visible=true;
+  flow6.visible=true;
+  flow7.visible=true;
+  flow8.visible=true;
+  flow10.visible=true;
+  flow11.visible=true;
+  flow12.visible=true;
+  flow13.visible=true;
+  flow14.visible=true;
+  flow15.visible=true;
+  
+  
+}
+
+else{
+
+  flow.visible=false;
+  flow1.visible=false;
+  flow2.visible=false;
+  flow3.visible=false;
+  flow4.visible=false;
+  flow5.visible=false;
+  flow6.visible=false;
+  flow7.visible=false;
+  flow8.visible=false;
+  flow10.visible=false;
+  flow11.visible=false;
+  flow12.visible=false;
+  flow13.visible=false;
+  flow14.visible=false;
+  flow15.visible=false;
+  document.getElementById("img5").display="none";
+  document.getElementById("shak").style.display="none"
+  document.getElementById("shpicr5").style.display="none"
+}
+
+
+
+if(scrollY>=4500 && scrollY<=5400){
+  birdd.visible=true;
+
+}else if (scrollY>=11000 && scrollY<=13000) {
+  birdd.visible=true;
+}
+else{
+  birdd.visible=false;
+
+}
+
+
+if(scrollY>=1){
+
+flow4.visible=false;
+flow5.visible=false;
+flow1.visible=false;
+
+}
+
+
+//renndd();
+  /*
+$('#trust').val(trstu.position.z);
+
+if(trstu.position.z>=-1){
+  trstu.material.color.setHex( 0xFFFFFF);
+  sence2.add(light);
+  light.position.x=trstu.position.x;
+              light.position.y=trstu.position.y;
+              light.position.z=trstu.position.z;
+}
+*/
+
+spot2.position.set(
+camera2.position.x +1,
+camera2.position.y +1,
+camera2.position.z +1
+
+);
+
+
+}
+
+</script>
+</body>
+</html>
